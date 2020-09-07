@@ -7,7 +7,7 @@ docker build -t faf-league-db-migrations .
 docker network create faf
 docker run --network="faf" --network-alias="faf-league-db" -p 3307:3306 \
            -e MYSQL_ROOT_PASSWORD=banana \
-           -e MYSQL_DATABASE=faf \
+           -e MYSQL_DATABASE=faf-league \
            -d --name faf-league-db \
            mysql:5.7
 
